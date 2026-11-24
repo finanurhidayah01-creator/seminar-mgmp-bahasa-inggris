@@ -1,16 +1,28 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, set, child } from "firebase/database";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAW1EgAmD77jKAiQQC4ywBiCsyo8qi432Y",
-  authDomain: "cebete-f7219.firebaseapp.com",
-  databaseURL: "https://cebete-f7219-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "cebete-f7219",
-  storageBucket: "cebete-f7219.firebasestorage.app",
-  messagingSenderId: "610541161818",
-  appId: "1:610541161818:web:b87362c8abacd10358b763",
-  measurementId: "G-Q1E8VNGVCN"
+  apiKey: "AIzaSyA10-6ieD-hzwBIbmBSMtGCg_5jGEsuQsg",
+  authDomain: "listening-85a1a.firebaseapp.com",
+  databaseURL: "https://listening-85a1a-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "listening-85a1a",
+  storageBucket: "listening-85a1a.firebasestorage.app",
+  messagingSenderId: "384135584303",
+  appId: "1:384135584303:web:2ab90ea12cd1a9f10404da",
+  measurementId: "G-0N2D40VYYC"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);
 export { ref, get, set, child };
